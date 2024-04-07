@@ -73,3 +73,6 @@
     @apply flex items-center
 }
 
+.dark {
+    @apply bg-slate-950
+}

@@ -4,14 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CMS APPLICATION</title>
-    <link rel="stylesheet" href="./public/css/tailwind.css">
+    <link rel="stylesheet" href="./public/css/tailwind.css" />
   </head>
-  <body class="font-Geist-Regular p-10">
+  <body class="font-Geist-Regular p-10 ">
     <header class="between">
-        <div>1</div>
-        <div>2</div>
+      <div>
+        <a href="./index.html" class="font-Geist-Black text-2xl text-slate-900 dark:text-white">
+          Dashboard
+        </a>
+      </div>
+      <div>
+        <!-- Theme Button -->
+        <div class="relative flex-center w-12 rounded-md h-12 border">
+            <button id="themeButton">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                  </svg>
+            </button>
+        </div>
+      </div>
     </header>
     <main></main>
     <footer></footer>
+
+    <script type="module" src="./src/Utils/Functions/index.js"></script>
   </body>
 </html>
