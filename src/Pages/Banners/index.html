@@ -197,7 +197,7 @@
           class="mt-4 w-full h-[200px] rounded-md border dark:border-slate-400/20"
         >
           <header
-            class="flex child:flex child:items-center child:gap-2 items-center h-10 text-sm dark:text-slate-500 text-gray-500 gap-10 px-3 border-b dark:border-slate-400/20"
+            class="flex child:flex child:items-center child:whitespace-nowrap overflow-x-auto child:gap-2 items-center h-10 text-sm dark:text-slate-500 text-gray-500 gap-10 px-3 border-b dark:border-slate-400/20"
           >
             <div>
               <span> Label </span>
@@ -244,10 +244,197 @@
               <span> Active Banner </span>
             </div>
           </header>
-          <main class="w-full h-[170px] flex-center">
-            <span class="text-xs">
-                No result.
-            </span>
+          <main class="w-full h-[160px] flex-center">
+            <span class="text-xs"> No result. </span>
+          </main>
+        </section>
+
+        <!-- Table buttons -->
+        <section
+          class="flex mt-3 child:p-2 child:rounded-md child:px-3 dark:text-slate-500 child:border gap-2 text-xs dark:child:border-slate-400/20 dark:child-hover:bg-slate-900/30 child-hover:bg-slate-100 child:duration-150 items-center justify-end"
+        >
+          <button>Previous</button>
+          <button>Next</button>
+        </section>
+
+        <!-- API -->
+        <section class="w-full mt-6">
+          <header class="sm:pb-5 pb-2">
+            <h4 class="sm:text-3xl text-xl font-Inter-Bold">Api</h4>
+            <p
+              class="font-Inter-Regular mt-0.5 text-sm text-gray-500 dark:text-slate-500"
+            >
+              Api calls for banners
+            </p>
+          </header>
+          <main>
+            <!-- Api Card -->
+            <article class="api-card">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span class="font-Inter-Medium text-base uppercase"> get </span>
+                <span
+                  class="px-3 py-1.5 pt-2 rounded-lg bg-slate-200 dark:bg-slate-900"
+                >
+                  Public
+                </span>
+              </div>
+              <p
+                class="ml-6 mt-3 cursor-pointer text-xs font-mono px-2 py-1.5 rounded-md bg-slate-200 dark:bg-slate-900"
+              >
+                https://apiservice-ecommerce-dashboard.vercel.app/api/135ac897-89bd-47a2-bb05-a7e95e20ca2c/banners/{bannerId}
+              </p>
+            </article>
+            <!-- Api Card -->
+            <article class="api-card">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span class="font-Inter-Medium text-base uppercase"> get </span>
+                <span
+                  class="px-3 py-1.5 pt-2 rounded-lg bg-slate-200 dark:bg-slate-900"
+                >
+                  Public
+                </span>
+              </div>
+              <p
+                class="ml-6 mt-3 cursor-pointer text-xs font-mono px-2 py-1.5 rounded-md bg-slate-200 dark:bg-slate-900"
+              >
+                https://apiservice-ecommerce-dashboard.vercel.app/api/135ac897-89bd-47a2-bb05-a7e95e20ca2c/banners/{bannerId}
+              </p>
+            </article>
+
+            <!-- Api Card -->
+            <article class="api-card">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span class="font-Inter-Medium text-base uppercase"> get </span>
+                <span
+                  class="px-3 py-1.5 pt-2 rounded-lg bg-green-500 text-white"
+                >
+                  ADMIN
+                </span>
+              </div>
+              <p
+                class="ml-6 mt-3 cursor-pointer text-xs font-mono px-2 py-1.5 rounded-md bg-slate-200 dark:bg-slate-900"
+              >
+                https://apiservice-ecommerce-dashboard.vercel.app/api/135ac897-89bd-47a2-bb05-a7e95e20ca2c/banners/{bannerId}
+              </p>
+            </article>
+
+            <!-- Api Card -->
+            <article class="api-card">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span class="font-Inter-Medium text-base uppercase">
+                  post
+                </span>
+                <span
+                  class="px-3 py-1.5 pt-2 rounded-lg bg-green-500 text-white"
+                >
+                  ADMIN
+                </span>
+              </div>
+              <p
+                class="ml-6 mt-3 cursor-pointer text-xs font-mono px-2 py-1.5 rounded-md bg-slate-200 dark:bg-slate-900"
+              >
+                https://apiservice-ecommerce-dashboard.vercel.app/api/135ac897-89bd-47a2-bb05-a7e95e20ca2c/banners/{bannerId}
+              </p>
+            </article>
+
+            <!-- Api Card -->
+            <article class="api-card">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span class="font-Inter-Medium text-base uppercase">
+                  delete
+                </span>
+                <span
+                  class="px-3 py-1.5 pt-2 rounded-lg bg-green-500 text-white"
+                >
+                  ADMIN
+                </span>
+              </div>
+              <p
+                class="ml-6 mt-3 cursor-pointer text-xs font-mono px-2 py-1.5 rounded-md bg-slate-200 dark:bg-slate-900"
+              >
+                https://apiservice-ecommerce-dashboard.vercel.app/api/135ac897-89bd-47a2-bb05-a7e95e20ca2c/banners/{bannerId}
+              </p>
+            </article>
           </main>
         </section>
       </section>
