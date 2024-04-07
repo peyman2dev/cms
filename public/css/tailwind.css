@@ -2003,6 +2003,10 @@ video {
   padding-top: 0.5rem;
 }
 
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2697,6 +2701,10 @@ video {
 
   .sm\:w-\[360px\] {
     width: 360px;
+  }
+
+  .sm\:pb-6 {
+    padding-bottom: 1.5rem;
   }
 
   .sm\:text-2xl {
