@@ -51,8 +51,8 @@ profileButton.addEventListener("click", (event) => {
 const toggleNav = () => {
   navbarScreen.classList.toggle("invisible");
   navbarScreen.classList.toggle("opacity-0");
-  navbar.classList.toggle("right-[-1440px]");
-  navbar.classList.toggle("right-[0]");
+  navbar.classList.toggle("left-[-1440px]");
+  navbar.classList.toggle("left-[0]");
 };
 
 navbarButton.addEventListener("click", (event) => {
