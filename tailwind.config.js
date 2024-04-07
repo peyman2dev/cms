@@ -3,7 +3,6 @@ module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
     extend: {
-      
       fontFamily: {
         "Geist-Light": "Geist-Light",
         "Geist-Regular": "Geist-Regular",
@@ -15,8 +14,10 @@ module.exports = {
       },
     },
   },
-  plugins: [function({addVariant}) {
-    addVariant("child", "& > *")
-    addVariant("child-hover", "& > *:hover")
-  }],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
 };
