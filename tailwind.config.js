@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./**/*.{html,js}"],
   darkMode: "class",
+  
   theme: {
+    screens: {
+      sm:"568px",
+      md:"768px",
+      lg:"992px",
+      xl:"1280px",
+    },
     extend: {
       fontFamily: {
         "Geist-Light": "Geist-Light",
@@ -21,6 +28,9 @@ module.exports = {
         "Inter-Black": "Inter-Black",
         "Inter-UltraBlack": "Inter-UltraBlack",
       },
+      container: {
+        center: true
+      }
     },
   },
   plugins: [
