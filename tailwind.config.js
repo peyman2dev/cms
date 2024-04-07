@@ -12,6 +12,7 @@ module.exports = {
         "Geist-Bold": "Geist-Bold",
         "Geist-Black": "Geist-Black",
         "Geist-UltraBlack": "Geist-UltraBlack",
+        "Inter-Thin": "Inter-Thin",
         "Inter-Light": "Inter-Light",
         "Inter-Regular": "Inter-Regular",
         "Inter-Medium": "Inter-Medium",
