@@ -140,5 +140,5 @@
 }
 
 .api-card {
-    @apply  flex justify-center flex-col h-[120px] my-2 w-full rounded-lg border dark:border-slate-400/20 p-4
+    @apply  flex justify-center flex-col sm:h-[120px] my-2 w-full rounded-lg border dark:border-slate-400/20 p-5
 }
