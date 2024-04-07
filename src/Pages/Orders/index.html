@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS | Categories</title>
+    <link rel="stylesheet" href="../../../public/css/tailwind.css" />
+  </head>
+  <body class="font-Inter-Regular container lg:p-10 md:p-6 p-3 dark:text-white">
+    <header class="between border-b pb-3 sm:pb-6 dark:border-white/10">
+      <div>
+        <a
+          href="../../../index.html"
+          class="font-Inter-Black text-lg sm:text-2xl"
+        >
+          Panel.
+        </a>
+      </div>
+      <div class="ic gap-3">
+        <!-- Hamburger -->
+        <div class="relative flex-center sm:w-12 w-10 rounded-md h-10 sm:h-12">
+          <button id="navbar-button" class="w-full h-full flex-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Theme Button -->
+        <div
+          class="relative flex-center sm:w-12 w-10 rounded-md h-10 sm:h-12 border dark:border-white/10 dark:bg-slate-900/30"
+        >
+          <button id="themeButton" class="w-full h-full flex-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+              />
+            </svg>
+          </button>
+          <div
+            id="themes-card"
+            class="absolute duration-150 opacity-0 invisible w-[170px] child:duration-150 child-hover:dark:bg-slate-900 hover:bg-gray-100 child:rounded-md p-2 child:h-[40px] dark:bg-slate-950 border dark:border-white/10 rounded-md top-[110%] right-0 bg-white shadow-lg"
+          >
+            <div>
+              <button
+                id="lightButton"
+                class="h-full w-full text-start px-4"
+                value="light"
+              >
+                Light
+              </button>
+            </div>
+            <div>
+              <button
+                id="darkButton"
+                class="h-full w-full text-start px-4"
+                value="dark"
+              >
+                Dark
+              </button>
+            </div>
+            <div>
+              <button
+                id="systemButton"
+                class="h-full w-full text-start px-4"
+                value="system"
+              >
+                System
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Button -->
+        <div class="relative sm:w-12 w-10 h-10 sm:h-12 rounded-full">
+          <button
+            id="profile-button"
+            class="overflow-hidden w-full h-full rounded-full"
+          >
+            <img src="../../../public/images/profile.png" alt="" />
+          </button>
+
+          <section
+            class="sm:w-[360px] min-w-[330px] p-4 opacity-0 invisible bg-white shadow-lg dark:bg-slate-950 rounded-md border absolute duration-150 dark:border-white/10 top-[120%] right-0"
+            id="profile-dropdown"
+          >
+            <header class="ic gap-4 pb-4 border-b dark:border-b-white/10">
+              <div>
+                <img
+                  src="../../../public/images/profile.png"
+                  class="sm:w-12 w-10 h-10 sm:h-12 rounded-full"
+                  alt=""
+                />
+              </div>
+              <div>
+                <p class="font-Inter-Light text-sm">peyman2dev@gmail.com</p>
+                <p class="font-Inter-Light text-slate-500/80 text-sm">ADMIN</p>
+              </div>
+            </header>
+
+            <!-- Profile body -->
+            <main
+              class="child:flex child:items-center font-Inter-Light pt-2 child:cursor-pointer space-y-1 child-hover:dark:bg-slate-900/40 child:duration-150 child:gap-2 child:min-h-12 child:rounded-md child:px-4"
+            >
+              <!-- Profile Item -->
+              <div class="child:h-full child:flex child:items-center">
+                <span class="dark:text-slate-600">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                </span>
+                <span> Manage account </span>
+              </div>
+
+              <!-- Profile Item -->
+              <div class="child:h-full child:flex child:items-center">
+                <span class="dark:text-slate-600">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"
+                    />
+                  </svg>
+                </span>
+                <span> Sign out </span>
+              </div>
+            </main>
+            <footer></footer>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="mt-10  px-2 sm:px-4 md:px-6 lg:px-10">
+      <!-- Section Title -->
+      <div class="border-b between dark:border-white/10 sm:pb-5 pb-2">
+        <div>
+          <h4 class="sm:text-3xl text-xl font-Inter-Bold">Orders (0)</h4>
+          <p
+            class="font-Inter-Regular text-sm text-gray-500 dark:text-slate-500"
+          >
+          Manage Orders for your store
+        </p>
+        </div>
+        <div>
+            <button class="px-4 py-2 duration-150 hover:bg-white/80 text-sm rounded-md bg-white text-black font-Geist-Light">
+                + Add new
+            </button>
+        </div>
+      </div>
+
+      <section class="mt-10">
+        <div>
+          <input
+            type="text"
+            placeholder="Filter by label"
+            class="px-3 text-sm font-Geist-Light h-10 w-[240px] focus:border-slate-300/70 rounded-sm bg-transparent border dark:border-slate-400/20 focus:outline-none focus:border focus:dark:border-slate-400/40"
+          />
+        </div>
+
+        <!-- Table -->
+        <section
+          class="mt-4 w-full h-[200px] rounded-md border dark:border-slate-400/20"
+        >
+          <header
+            class="flex child:flex child:items-center child:whitespace-nowrap overflow-x-auto child:gap-2 items-center h-10 text-sm dark:text-slate-500 text-gray-500 gap-10 px-3 border-b dark:border-slate-400/20"
+          >
+            <div>
+              <span> Label </span>
+              <span class="text-xs">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div>
+              <span> Date </span>
+              <span class="text-xs">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div>
+              <span> Image </span>
+            </div>
+            <div>
+              <span> Active Banner </span>
+            </div>
+          </header>
+          <main class="w-full h-[160px] flex-center">
+            <span class="text-xs"> No result. </span>
+          </main>
+        </section>
+
+        <!-- Table buttons -->
+        <section
+          class="flex mt-3 child:p-2 child:rounded-md child:px-3 dark:text-slate-500 child:border gap-2 text-xs dark:child:border-slate-400/20 dark:child-hover:bg-slate-900/30 child-hover:bg-slate-100 child:duration-150 items-center justify-end"
+        >
+          <button>Previous</button>
+          <button>Next</button>
+        </section>
+
+        <!-- API -->
+        <section class="w-full mt-6">
+          <header class="sm:pb-5 pb-2">
+            <h4 class="sm:text-3xl text-xl font-Inter-Bold">Api</h4>
+            <p
+              class="font-Inter-Regular mt-0.5 text-sm text-gray-500 dark:text-slate-500"
+            >
+              Api calls for banners
+            </p>
+          </header>
+          <main>
+            <!-- Api Card -->
+            <article class="api-card">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span class="font-Inter-Medium text-base uppercase"> get </span>
+                <span
+                  class="px-3 py-1.5 pt-2 rounded-lg bg-slate-200 dark:bg-slate-900"
+                >
+                  Public
+                </span>
+              </div>
+              <p
+                class="ml-6 mt-3 cursor-pointer text-xs font-mono rounded-md bg-slate-200 dark:bg-slate-900 line-clamp-2"
+              >
+                https://apiservice-ecommerce-dashboard.vercel.app/api/135ac897-89bd-47a2-bb05-a7e95e20ca2c/banners/{bannerId}
+              </p>
+            </article>
+            <!-- Api Card -->
+            <article class="api-card">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span class="font-Inter-Medium text-base uppercase"> get </span>
+                <span
+                  class="px-3 py-1.5 pt-2 rounded-lg bg-slate-200 dark:bg-slate-900"
+                >
+                  Public
+                </span>
+              </div>
+              <p
+                class="ml-6 mt-3 cursor-pointer text-xs font-mono rounded-md bg-slate-200 dark:bg-slate-900 line-clamp-2"
+              >
+                https://apiservice-ecommerce-dashboard.vercel.app/api/135ac897-89bd-47a2-bb05-a7e95e20ca2c/banners/{bannerId}
+              </p>
+            </article>
+
+            <!-- Api Card -->
+            <article class="api-card">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span class="font-Inter-Medium text-base uppercase"> get </span>
+                <span
+                  class="px-3 py-1.5 pt-2 rounded-lg bg-green-500 text-white"
+                >
+                  ADMIN
+                </span>
+              </div>
+              <p
+                class="ml-6 mt-3 cursor-pointer text-xs font-mono rounded-md bg-slate-200 dark:bg-slate-900 line-clamp-2"
+              >
+                https://apiservice-ecommerce-dashboard.vercel.app/api/135ac897-89bd-47a2-bb05-a7e95e20ca2c/banners/{bannerId}
+              </p>
+            </article>
+
+            <!-- Api Card -->
+            <article class="api-card">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span class="font-Inter-Medium text-base uppercase">
+                  post
+                </span>
+                <span
+                  class="px-3 py-1.5 pt-2 rounded-lg bg-green-500 text-white"
+                >
+                  ADMIN
+                </span>
+              </div>
+              <p
+                class="ml-6 mt-3 cursor-pointer text-xs font-mono rounded-md bg-slate-200 dark:bg-slate-900 line-clamp-2"
+              >
+                https://apiservice-ecommerce-dashboard.vercel.app/api/135ac897-89bd-47a2-bb05-a7e95e20ca2c/banners/{bannerId}
+              </p>
+            </article>
+
+            <!-- Api Card -->
+            <article class="api-card">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span class="font-Inter-Medium text-base uppercase">
+                  delete
+                </span>
+                <span
+                  class="px-3 py-1.5 pt-2 rounded-lg bg-green-500 text-white"
+                >
+                  ADMIN
+                </span>
+              </div>
+              <p
+                class="ml-6 mt-3 cursor-pointer text-xs font-mono rounded-md bg-slate-200 dark:bg-slate-900 line-clamp-2"
+              >
+                https://apiservice-ecommerce-dashboard.vercel.app/api/135ac897-89bd-47a2-bb05-a7e95e20ca2c/banners/{bannerId}
+              </p>
+            </article>
+          </main>
+        </section>
+      </section>
+    </main>
+
+    <!-- Navbar -->
+    <section
+      id="navbar-wrap"
+      class="fixed opacity-0 invisible w-full h-full top-0 left-0 bg-slate-950/20 backdrop-blur-sm duration-150"
+    >
+    <section
+    id="navbar"
+    class="w-[260px] p-5 h-screen cursor-default duration-150 bg-white dark:bg-zinc-900 fixed left-[-1440px]"
+  >
+        <header>
+          <button id="close-navbar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </header>
+        <main
+          class="mt-10 space-y-5 w-full font-Inter-Regular child:h-7 child:w-full"
+        >
+          <div>
+            <a href="../../../index.html" class="w-full h-full block">
+              Overview
+            </a>
+          </div>
+          <div>
+            <a href="../Banners/index.html" class="w-full h-full block">
+              Banners
+            </a>
+          </div>
+          <div>
+            <a
+              href="../Billboards/index.html"
+              class="w-full h-full block"
+            >
+              Billboards
+            </a>
+          </div>
+          <div>
+            <a href="../Categories/index.html" class="w-full h-full block"> Categories </a>
+          </div>
+          <div>
+            <a href="../Sizes/index.html" class="w-full h-full block"> Sizes </a>
+          </div>
+          <div>
+            <a href="../Colors/index.html" class="w-full h-full block"> Colors </a>
+          </div>
+          <div>
+            <a href="../Products/index.html" class="w-full h-full block"> Products </a>
+          </div>
+          <div>
+            <a href="../Orders/index.html" class="w-full h-full block  relative before:absolute before:content-[''] before:w-1/4 before:h-px before:top-[100%] before:dark:bg-gray-500 before:bg-gray-300"> Orders </a>
+          </div>
+          <div>
+            <a href="./index.html" class="w-full h-full block"> Settings </a>
+          </div>
+        </main>
+      </section>
+    </section>
+
+    <footer></footer>
+
+    <script type="module" src="../../../src/Utils/Functions/index.js"></script>
+  </body>
+</html>
