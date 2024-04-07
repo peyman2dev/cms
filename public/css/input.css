@@ -19,8 +19,6 @@
     src: url(../fonts/Geist/Geist-Regular.otf);
 }
 
-
-
 @font-face {
     font-family: 
     "Geist-Medium"
@@ -59,6 +57,62 @@
     ;
     src: url(../fonts/Geist/Geist-UltraBlack.otf);
 }
+
+
+@font-face {
+    font-family: 
+    "Inter-Light"
+    ;
+    src: url(../fonts/Inter/Inter-Light.otf);
+}
+
+@font-face {
+    font-family: 
+    "Inter-Regular"
+    ;
+    src: url(../fonts/Inter/Inter-Regular.otf);
+}
+
+@font-face {
+    font-family: 
+    "Inter-Medium"
+    ;
+    src: url(../fonts/Inter/Inter-Medium.otf);
+}
+
+
+@font-face {
+    font-family: 
+    "Inter-SemiBold"
+    ;
+    src: url(../fonts/Inter/Inter-SemiBold.otf);
+}
+
+
+@font-face {
+    font-family: 
+    "Inter-Bold"
+    ;
+    src: url(../fonts/Inter/Inter-Bold.otf);
+}
+
+
+@font-face {
+    font-family: 
+    "Inter-Black"
+    ;
+    src: url(../fonts/Inter/Inter-Black.otf);
+}
+
+
+@font-face {
+    font-family: 
+    "Inter-UltraBlack"
+    ;
+    src: url(../fonts/Inter/Inter-ExtraBold.otf);
+}
+
+
 
 
 .between {

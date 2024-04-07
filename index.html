@@ -6,22 +6,73 @@
     <title>CMS APPLICATION</title>
     <link rel="stylesheet" href="./public/css/tailwind.css" />
   </head>
-  <body class="font-Geist-Regular p-10 ">
-    <header class="between">
+  <body class="font-Inter-Regular p-10 dark:text-white">
+    <header class="between border-b pb-6 dark:border-white/10">
       <div>
-        <a href="./index.html" class="font-Geist-Black text-2xl text-slate-900 dark:text-white">
-          Dashboard
-        </a>
+        <a href="./index.html" class="font-Inter-Black text-2xl"> Dashboard </a>
       </div>
-      <div>
+      <div class="ic gap-3">
         <!-- Theme Button -->
-        <div class="relative flex-center w-12 rounded-md h-12 border">
-            <button id="themeButton">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-                  </svg>
-            </button>
+        <div
+          class="relative flex-center w-12 rounded-md h-12 border dark:border-white/10 dark:bg-slate-900/30"
+        >
+          <button id="themeButton" class="w-full h-full flex-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+              />
+            </svg>
+          </button>
+          <div
+            id="themes-card"
+            class="absolute duration-150 opacity-0 invisible w-[170px] child:duration-150 child-hover:dark:bg-slate-900 hover:bg-gray-100 child:rounded-md p-2 child:h-[40px] dark:bg-slate-950 border dark:border-white/10 rounded-md top-[110%] right-0 bg-white shadow-lg"
+          >
+            <div>
+              <button
+                id="lightButton"
+                class="h-full w-full text-start px-4"
+                value="light"
+              >
+                Light
+              </button>
+            </div>
+            <div>
+              <button
+                id="darkButton"
+                class="h-full w-full text-start px-4"
+                value="dark"
+              >
+                Dark
+              </button>
+            </div>
+            <div>
+              <button
+                id="systemButton"
+                class="h-full w-full text-start px-4"
+                value="system"
+              >
+                System
+              </button>
+            </div>
+          </div>
         </div>
+
+        <!-- Profile Button -->
+        <div class="relative w-12 h-12 rounded-full">
+          <button id="profile-button" class="overflow-hidden w-full h-full rounded-full">
+            <img src="/public/images/profile.png" alt="" />
+          </button>
+        </div>
+
       </div>
     </header>
     <main></main>
