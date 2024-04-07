@@ -14,6 +14,20 @@
         </a>
       </div>
       <div class="ic gap-3">
+
+        <!-- Hamburger -->
+            <div
+            class="relative flex-center sm:w-12 w-10 rounded-md h-10 sm:h-12"
+          >
+            <button id="navbar-button" class="w-full h-full flex-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          
+          </div>
+        
+        
         <!-- Theme Button -->
         <div
           class="relative flex-center sm:w-12 w-10 rounded-md h-10 sm:h-12 border dark:border-white/10 dark:bg-slate-900/30"
@@ -212,6 +226,23 @@
         </article>
       </section>
     </main>
+
+
+    <!-- Navbar -->
+    <section id="navbar-wrap" class="fixed cursor-pointer opacity-0 invisible  w-full h-full top-0 left-0 bg-slate-950/20 backdrop-blur-sm duration-150">
+      <section id="navbar" class="w-[260px] p-5 h-screen cursor-default duration-150 bg-white dark:bg-slate-900 fixed right-[-1440px]">
+        <header>
+          <button id="close-navbar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+            
+          </button>
+        </header>
+      </section>
+    </section>
+    
+    
     <footer></footer>
 
     <script type="module" src="./src/Utils/Functions/index.js"></script>

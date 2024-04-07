@@ -11,6 +11,10 @@ import {
 import { profileButton,profileDropdown, toggleProfile } from "./profile.js";
 
 const $ = document;
+const navbarScreen = $.querySelector("#navbar-wrap")
+const navbar = $.querySelector("#navbar")
+const navbarButton = $.querySelector("#navbar-button")
+const navbarCloseBtn = $.querySelector("#close-navbar")
 
 //  Theme Handler
 themeButton.addEventListener("click", (event) => {
@@ -44,21 +48,29 @@ profileButton.addEventListener('click', event => {
   toggleProfile()
 })
 
+const toggleNav = () => {
+  navbarScreen.classList.toggle('invisible')
+  navbarScreen.classList.toggle('opacity-0')
+  navbar.classList.toggle('right-[-1440px]')
+  navbar.classList.toggle('right-[0]')
+}
 
 
+navbarButton.addEventListener('click', event => {
+  if (navbarScreen.classList.contains('opacity-0') && navbarScreen.classList.contains('invisible')) {
+    toggleNav()
+  }
+})
+navbar.addEventListener('click', event => {
+  event.stopPropagation()
+})
+
+navbarScreen.addEventListener('click', () => {
+  toggleNav()
+})
 
 
-
-
-
-
-
-
-
-
-
-
-
+navbarCloseBtn.addEventListener("click", () => toggleNav())
 
 //  mounted actions 
 window.onload = () => {
