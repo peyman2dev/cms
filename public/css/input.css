@@ -142,3 +142,7 @@
 .api-card {
     @apply  flex justify-center flex-col sm:h-[120px] my-2 w-full rounded-lg border dark:border-slate-400/20 p-5
 }
+
+.input-element {
+    @apply block h-10 text-sm px-4 border dark:border-white/10 font-Geist-Light rounded-md placeholder:text-white/40 placeholder:font-Inter-Light outline-none w-full bg-gray-50 dark:bg-[#0e0e0e!important]
+}

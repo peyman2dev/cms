@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": "982374",
+      "username": "sking28",
+      "name": "Scarlett",
+      "lastname": "King",
+      "role": "moderator"
+    },
+    {
+      "id": "123874",
+      "username": "jwright29",
+      "name": "Joseph",
+      "lastname": "Wright",
+      "role": "user"
+    },
+    {
+      "id": "348932",
+      "username": "vlopez30",
+      "name": "Victoria",
+      "lastname": "Lopez",
+      "role": "user"
+    },
+    {
+      "id": "839274",
+      "username": "shill31",
+      "name": "Samuel",
+      "lastname": "Hill",
+      "role": "admin"
+    },
+    {
+      "id": "563982",
+      "username": "gscott32",
+      "name": "Grace",
+      "lastname": "Scott",
+      "role": "user"
+    },
+    {
+      "id": "492875",
+      "username": "dgreen33",
+      "name": "David",
+      "lastname": "Green",
+      "role": "user"
+    },
+    {
+      "id": "234891",
+      "username": "ladams34",
+      "name": "Lily",
+      "lastname": "Adams",
+      "role": "moderator"
+    },
+    {
+      "id": "489213",
+      "username": "abaker35",
+      "name": "Andrew",
+      "lastname": "Baker",
+      "role": "moderator"
+    },
+    {
+      "id": "8bab4973-841f-4612-8f89-3071c1791624",
+      "username": "peyman2dev",
+      "name": "Peyman",
+      "lastname": "Ahmadi",
+      "role": "moderator"
+    }
+  ]
+}

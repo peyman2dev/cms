@@ -1,325 +1,217 @@
+<!-- Scripts: Utils/functions/index.js -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CMS APPLICATION</title>
-    <link rel="stylesheet" href="./public/css/tailwind.css" />
-  </head>
-  <body class="font-Inter-Regular container lg:p-10 md:p-6 p-3 dark:text-white">
-    <header class="between border-b pb-3 sm:pb-6 dark:border-white/10">
-      <div>
-        <a href="./index.html" class="font-Inter-Black text-lg sm:text-2xl">
-          Panel.
-        </a>
-      </div>
-      <div class="ic gap-3">
-        <!-- Hamburger -->
-        <div class="relative flex-center sm:w-12 w-10 rounded-md h-10 sm:h-12">
-          <button id="navbar-button" class="w-full h-full flex-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-        </div>
 
-        <!-- Theme Button -->
-        <div
-          class="relative flex-center sm:w-12 w-10 rounded-md h-10 sm:h-12 border dark:border-white/10 dark:bg-slate-900/30"
-        >
-          <button id="themeButton" class="w-full h-full flex-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-              />
-            </svg>
-          </button>
-          <div
-            id="themes-card"
-            class="absolute duration-150 opacity-0 invisible w-[170px] child:duration-150 child-hover:dark:bg-slate-900 hover:bg-gray-100 child:rounded-md p-2 child:h-[40px] dark:bg-slate-950 border dark:border-white/10 rounded-md top-[110%] right-0 bg-white shadow-lg"
-          >
-            <div>
-              <button
-                id="lightButton"
-                class="h-full w-full text-start px-4"
-                value="light"
-              >
-                Light
-              </button>
-            </div>
-            <div>
-              <button
-                id="darkButton"
-                class="h-full w-full text-start px-4"
-                value="dark"
-              >
-                Dark
-              </button>
-            </div>
-            <div>
-              <button
-                id="systemButton"
-                class="h-full w-full text-start px-4"
-                value="system"
-              >
-                System
-              </button>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMS APPLICATION</title>
+  <link rel="stylesheet" href="./public/css/tailwind.css" />
+</head>
+
+<body class="font-Inter-Regular container lg:p-10 md:p-6 p-3 dark:text-white">
+  <header class="between border-b pb-3 sm:pb-6 dark:border-white/10">
+    <div>
+      <a href="./index.html" class="font-Inter-Black text-lg sm:text-2xl">
+        Panel.
+      </a>
+    </div>
+    <div class="ic gap-3">
+      <!-- Hamburger -->
+      <div class="relative flex-center sm:w-12 w-10 rounded-md h-10 sm:h-12">
+        <button id="navbar-button" class="w-full h-full flex-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Theme Button -->
+      <div
+        class="relative flex-center sm:w-12 w-10 rounded-md h-10 sm:h-12 border dark:border-white/10 dark:bg-slate-900/30">
+        <button id="themeButton" class="w-full h-full flex-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+          </svg>
+        </button>
+        <div id="themes-card"
+          class="absolute duration-150 opacity-0 invisible w-[170px] child:duration-150 child-hover:dark:bg-slate-900 hover:bg-gray-100 child:rounded-md p-2 child:h-[40px] dark:bg-slate-950 border dark:border-white/10 rounded-md top-[110%] right-0 bg-white shadow-lg">
+          <div>
+            <button id="lightButton" class="h-full w-full text-start px-4" value="light">
+              Light
+            </button>
+          </div>
+          <div>
+            <button id="darkButton" class="h-full w-full text-start px-4" value="dark">
+              Dark
+            </button>
+          </div>
+          <div>
+            <button id="systemButton" class="h-full w-full text-start px-4" value="system">
+              System
+            </button>
           </div>
         </div>
-
-        <!-- Profile Button -->
-        <div class="relative sm:w-12 w-10 h-10 sm:h-12 rounded-full">
-          <button
-            id="profile-button"
-            class="overflow-hidden w-full h-full rounded-full"
-          >
-            <img src="./public/images/profile.png" alt="" />
-          </button>
-
-          <section
-            class="sm:w-[360px] min-w-[330px] p-4 opacity-0 invisible bg-white shadow-lg dark:bg-slate-950 rounded-md border absolute duration-150 dark:border-white/10 top-[120%] right-0"
-            id="profile-dropdown"
-          >
-            <header class="ic gap-4 pb-4 border-b dark:border-b-white/10">
-              <div>
-                <img
-                  src="./public/images/profile.png"
-                  class="sm:w-12 w-10 h-10 sm:h-12 rounded-full"
-                  alt=""
-                />
-              </div>
-              <div>
-                <p class="font-Inter-Light text-sm">peyman2dev@gmail.com</p>
-                <p class="font-Inter-Light text-slate-500/80 text-sm">ADMIN</p>
-              </div>
-            </header>
-
-            <!-- Profile body -->
-            <main
-              class="child:flex child:items-center font-Inter-Light pt-2 child:cursor-pointer space-y-1 child-hover:dark:bg-slate-900/40 child:duration-150 child:gap-2 child:min-h-12 child:rounded-md child:px-4"
-            >
-              <!-- Profile Item -->
-              <div class="child:h-full child:flex child:items-center">
-                <span class="dark:text-slate-600">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                    />
-                  </svg>
-                </span>
-                <span> Manage account </span>
-              </div>
-
-              <!-- Profile Item -->
-              <div class="child:h-full child:flex child:items-center">
-                <span class="dark:text-slate-600">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"
-                    />
-                  </svg>
-                </span>
-                <span> Sign out </span>
-              </div>
-            </main>
-            <footer></footer>
-          </section>
-        </div>
       </div>
-    </header>
 
-    <!-- Main -->
-    <main class="mt-10 px-2 sm:px-4 md:px-6 lg:px-10">
-      <div class="border-b dark:border-white/10 sm:pb-5 pb-2">
-        <h4 class="sm:text-3xl text-xl font-Inter-Bold">Dashboard</h4>
-        <p class="font-Inter-Regular text-sm text-gray-500 dark:text-slate-500">
-          Overview of your Store
-        </p>
+      <!-- Profile Button -->
+      <div class="relative sm:w-12 w-10 h-10 sm:h-12 rounded-full">
+        <button id="profile-button" class="overflow-hidden w-full h-full rounded-full">
+          <img src="./public/images/profile.png" alt="" />
+        </button>
+
+        <section
+          class="sm:w-[360px] min-w-[330px] p-4 opacity-0 invisible bg-white shadow-lg dark:bg-slate-950 rounded-md border absolute duration-150 dark:border-white/10 top-[120%] right-0"
+          id="profile-dropdown">
+          <header class="ic gap-4 pb-4 border-b dark:border-b-white/10">
+            <div>
+              <img src="./public/images/profile.png" class="sm:w-12 w-10 h-10 sm:h-12 rounded-full" alt="" />
+            </div>
+            <div>
+              <p class="font-Inter-Light text-sm">peyman2dev@gmail.com</p>
+              <p class="font-Inter-Light text-slate-500/80 text-sm">ADMIN</p>
+            </div>
+          </header>
+
+          <!-- Profile body -->
+          <main
+            class="child:flex child:items-center font-Inter-Light pt-2 child:cursor-pointer space-y-1 child-hover:dark:bg-slate-900/40 child:duration-150 child:gap-2 child:min-h-12 child:rounded-md child:px-4">
+            <!-- Profile Item -->
+            <div class="child:h-full child:flex child:items-center">
+              <span class="dark:text-slate-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+              </span>
+              <span> Manage account </span>
+            </div>
+
+            <!-- Profile Item -->
+            <div class="child:h-full child:flex child:items-center">
+              <span class="dark:text-slate-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                </svg>
+              </span>
+              <span> Sign out </span>
+            </div>
+          </main>
+          <footer></footer>
+        </section>
       </div>
-      <section
-        class="mt-4 grid child:w-full child:rounded-lg child:p-5 child:border child:dark:border-slate-200/20 child:h-[110px] md:grid-cols-2 w-full lg:grid-cols-3 gap-4"
-      >
-        <article>
-          <div class="between">
-            <p class="text-lg font-Inter-Medium">Total Revenue</p>
-            <span class="text-sm dark:text-slate-600 text-gray-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"
-                />
-              </svg>
-            </span>
-          </div>
-          <div class="mt-2 font-Inter-Bold text-2xl">$2,999.00</div>
-        </article>
-        <article>
-          <div class="between">
-            <p class="text-lg font-Inter-Medium">Sales</p>
-            <span class="text-sm dark:text-slate-600 text-gray-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"
-                />
-              </svg>
-            </span>
-          </div>
-          <div class="mt-2 font-Inter-Bold text-2xl">9,355</div>
-        </article>
-        <article>
-          <div class="between">
-            <p class="text-lg font-Inter-Medium">Product in Stock</p>
-            <span class="text-sm dark:text-slate-600 text-gray-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
-                />
-              </svg>
-            </span>
-          </div>
-          <div class="mt-2 font-Inter-Bold text-2xl">13</div>
-        </article>
-      </section>
-    </main>
+    </div>
+  </header>
 
-    <!-- Navbar -->
+  <!-- Main -->
+  <main class="mt-10 px-2 sm:px-4 md:px-6 lg:px-10">
+    <div class="border-b dark:border-white/10 sm:pb-5 pb-2">
+      <h4 class="sm:text-3xl text-xl font-Inter-Bold">Dashboard</h4>
+      <p class="font-Inter-Regular text-sm text-gray-500 dark:text-slate-500">
+        Overview of your Store
+      </p>
+    </div>
     <section
-      id="navbar-wrap"
-      class="fixed opacity-0 invisible w-full h-full top-0 left-0 bg-slate-950/20 backdrop-blur-sm duration-150"
-    >
-      <section
-        id="navbar"
-        class="w-[260px] p-5 h-screen cursor-default duration-150 bg-white dark:bg-zinc-900 fixed left-[-1440px]"
-      >
-        <header>
-          <button id="close-navbar">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
+      class="mt-4 grid child:w-full child:rounded-lg child:p-5 child:border child:dark:border-slate-200/20 child:h-[110px] md:grid-cols-2 w-full lg:grid-cols-3 gap-4">
+      <article>
+        <div class="between">
+          <p class="text-lg font-Inter-Medium">Total Revenue</p>
+          <span class="text-sm dark:text-slate-600 text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
             </svg>
-          </button>
-        </header>
-        <main
-          class="mt-10 space-y-5 w-full font-Inter-Regular child:h-7 child:w-full"
-        >
-          <div>
-            <a
-              href="./index.html"
-              class="w-full h-full block relative before:absolute before:content-[''] before:w-1/4 before:h-px before:top-[100%] before:dark:bg-gray-500 before:bg-gray-300"
-            >
-              Overview
-            </a>
-          </div>
-          <div>
-            <a href="./src/Pages/Banners/index.html" class="w-full h-full block"> Banners </a>
-          </div>
-          <div>
-            <a  href="./src/Pages/Billboards/index.html" class="w-full h-full block"> Billboards </a>
-          </div>
-          <div>
-            <a href="./src/Pages/Categories/index.html" class="w-full h-full block"> Categories </a>
-          </div>
-          <div>
-            <a href="./src/Pages/Sizes/index.html" class="w-full h-full block"> Sizes </a>
-          </div>
-          <div>
-            <a href="./src/Pages/Colors/index.html" class="w-full h-full block"> Colors </a>
-          </div>
-          <div>
-            <a href="./src/Pages/Products/index.html" class="w-full h-full block"> Products </a>
-          </div>
-          <div>
-            <a href="./src/Pages/Orders/index.html" class="w-full h-full block"> Orders </a>
-          </div>
-          <div>
-            <a href="./src/Pages/Settings/index.html" class="w-full h-full block"> Settings </a>
-          </div>
-        </main>
-      </section>
+          </span>
+        </div>
+        <div class="mt-2 font-Inter-Bold text-2xl">$2,999.00</div>
+      </article>
+      <article>
+        <div class="between">
+          <p class="text-lg font-Inter-Medium">Sales</p>
+          <span class="text-sm dark:text-slate-600 text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
+            </svg>
+          </span>
+        </div>
+        <div class="mt-2 font-Inter-Bold text-2xl">9,355</div>
+      </article>
+      <article>
+        <div class="between">
+          <p class="text-lg font-Inter-Medium">Product in Stock</p>
+          <span class="text-sm dark:text-slate-600 text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+            </svg>
+          </span>
+        </div>
+        <div class="mt-2 font-Inter-Bold text-2xl">13</div>
+      </article>
     </section>
+  </main>
 
-    <footer></footer>
+  <!-- Navbar -->
+  <section id="navbar-wrap" class="fixed opacity-0 invisible w-full h-full top-0 left-0 bg-slate-950/20 duration-150">
+    <section id="navbar"
+      class="w-[260px] p-5 h-screen cursor-default duration-150 bg-white dark:bg-zinc-900 fixed left-[-1440px]">
+      <header>
+        <button id="close-navbar">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </header>
+      <main class="mt-10 space-y-5 w-full font-Inter-Regular child:h-7 child:w-full">
+        <div>
+          <a href="./index.html"
+            class="w-full h-full block relative before:absolute before:content-[''] before:w-1/4 before:h-px before:top-[100%] before:dark:bg-gray-500 before:bg-gray-300">
+            Overview
+          </a>
+        </div>
+        <div>
+          <a href="./src/Pages/Users/index.html" class="w-full h-full block"> Users </a>
+        </div>
+        <div>
+          <a href="./src/Pages/Billboards/index.html" class="w-full h-full block"> Billboards </a>
+        </div>
+        <div>
+          <a href="./src/Pages/Categories/index.html" class="w-full h-full block"> Categories </a>
+        </div>
+        <div>
+          <a href="./src/Pages/Sizes/index.html" class="w-full h-full block"> Sizes </a>
+        </div>
+        <div>
+          <a href="./src/Pages/Colors/index.html" class="w-full h-full block"> Colors </a>
+        </div>
+        <div>
+          <a href="./src/Pages/Products/index.html" class="w-full h-full block"> Products </a>
+        </div>
+        <div>
+          <a href="./src/Pages/Orders/index.html" class="w-full h-full block"> Orders </a>
+        </div>
+        <div>
+          <a href="./src/Pages/Settings/index.html" class="w-full h-full block"> Settings </a>
+        </div>
+      </main>
+    </section>
+  </section>
 
-    <script type="module" src="./src/Utils/Functions/index.js"></script>
-  </body>
+  <footer></footer>
+
+  <script type="module" src="./src/Utils/Functions/index.js"></script>
+</body>
+
 </html>
